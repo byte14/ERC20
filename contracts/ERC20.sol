@@ -122,8 +122,8 @@ contract ERC20 {
     function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
         require(_to != address(0), "Transfer to the zero address!");
         require(_balanceOf[_from] >= _value, "Insufficient tokens!");
-        require(_allowed[_from][msg.sender] >= _value, "Insufficent allowance!");
-
+        require(_allowed[_from][msg.sender] >= _value, "Insufficient allowance!");
+        
         _balanceOf[_from] -= _value;
         _balanceOf[_to] += _value;
         _allowed[_from][msg.sender] -= _value;
