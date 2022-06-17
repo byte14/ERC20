@@ -1,15 +1,6 @@
-# Basic Sample Hardhat Project
+# Develop and deploy a ERC20 (Mintable and Burnable) token on the Ropsten Ethereum Testnet. Please do not use any thirdparty libraries.
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+ERC20 Contract deployed to: 0xDA52f7432De4859d0EbC9cac822A3b9504e76CB5
 
-Try running some of the following tasks:
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+![](../Pictures/Screenshots/Screenshot%20from%202022-06-17%2003-39-44.png)
