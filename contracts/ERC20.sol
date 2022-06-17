@@ -190,7 +190,7 @@ contract ERC20 {
     function burnFrom(address _from, uint256 _value) public {
         require(_from != address(0), "Burn from the zero address!");
         require(_balanceOf[_from] >= _value, "Burn amount exceeds balance!");
-        require(_allowed[_from][msg.sender] >= _value, "Insufficent allowance!");
+        require(_allowed[_from][msg.sender] >= _value, "Insufficient allowance!");
 
         _totalSupply -= _value;
         _balanceOf[_from] -= _value;
