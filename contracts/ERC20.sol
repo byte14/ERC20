@@ -135,12 +135,13 @@ contract ERC20 {
     /**
      * @dev Approve the passed address to spend the specified amount of tokens.
      * @param _spender address which will spend the funds on behalf of the caller.
-     * @param _value uin256 amount of tokens to be spent.
+     * @param _value uint256 amount of tokens to be spent.
      * @return success boolean indicating the trasaction succeeded.
      */
     function approve(address _spender, uint256 _value) public returns (bool success) {
         require(_spender != address(0), "Approve to the zero address!");
-        _allowed[msg.sender][_spender] += _value;
+        require(_value == 0 || _allowed[msg.sender][_spender] == 0);
+        _allowed[msg.sender][_spender] = _value;
         emit Approval(msg.sender, _spender, _value);
         return true;
     }
